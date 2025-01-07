@@ -1,61 +1,67 @@
 # Indigenous Heritage Inventory System
 
-The Indigenous Heritage Inventory System is a console-based application developed in C++ as part of an Object-Oriented Programming (OOP) course project. This system is designed to manage records related to indigenous heritage, providing an effective way to organize and preserve cultural and natural heritage data.
+## Overview
+The Indigenous Heritage Inventory System is a project designed to manage and preserve heritage sites, including cultural and natural sites. This system provides functionality for adding, viewing, and managing heritage sites, categories, and preservation efforts. It aims to facilitate the systematic tracking and documentation of heritage information.
 
 ## Features
 
-- **Heritage Site Management**
-  - Create, update, and view detailed profiles for heritage sites.
-  
-- **Category Organization**
-  - Group heritage sites into meaningful categories for easier access and management.
-  
-- **Preservation Tracking**
-  - Record and review preservation efforts and track ongoing initiatives.
+### Heritage Site Management
+- **Add Heritage Sites**: Register cultural or natural sites with relevant details such as name, location, and significance.
+- **View Heritage Sites**: Display details of all registered heritage sites.
 
-- **Core OOP Principles**
-  - Implements essential concepts such as:
-    - **Abstraction**: Simplifying complex operations into user-friendly functionalities.
-    - **Encapsulation**: Protecting sensitive data within classes.
-    - **Inheritance**: Reusing common behaviors across different classes.
-    - **Polymorphism**: Enabling flexible and dynamic method usage.
-    - **Operator Overloading**: Enhancing the functionality of operators for custom types.
+### Category Management
+- **Add Categories**: Create categories to group heritage sites by shared characteristics.
+- **View Categories**: Display all categories and their associated sites.
 
-## Learning Outcomes
+### Preservation Efforts
+- **Record Preservation Efforts**: Log preservation activities for specific heritage sites, including effort ID, description, and date.
+- **View Preservation History**: Review recorded preservation efforts.
 
-This project allowed me to:
-- Develop a deeper understanding of C++ and its OOP features.
-- Practice building a structured application with real-world implications.
-- Explore the intersection of software development and cultural heritage preservation.
+## Project Structure
 
-## How to Run the Project
+The project contains the following classes:
 
-1. **Clone the Repository**:
-   
-bash
-   git clone https://github.com/NhiLuu1102/indigenous-heritage-inventory.git
-   cd indigenous-heritage-inventory
+### 1. `HeritageSite`
+- Manages information about individual heritage sites.
+- Supports attributes like site ID, name, location, and category ID.
+- Includes methods for viewing and updating site details.
 
-2. **Compile the Code**:
-   Use a C++ compiler, such as g++:
-   
-bash
-   g++ -o inventory_system final_project.cpp
+### 2. `CulturalSite` (Derived from `HeritageSite`)
+- Adds cultural significance details for cultural heritage sites.
+- Overrides the `getDescription` method.
 
-3. **Run the Program**:
-   
-bash
-   ./inventory_system
+### 3. `NaturalSite` (Derived from `HeritageSite`)
+- Adds ecosystem details for natural heritage sites.
+- Overrides the `getDescription` method.
 
+### 4. `Category`
+- Groups heritage sites into categories.
+- Supports adding and displaying sites under a specific category.
 
-## Technologies Used
-- **Programming Language**: C++
-- **Development Environment**: Any C++ IDE or terminal-based compilation tools
+### 5. `PreservationEffort`
+- Logs preservation activities for heritage sites.
+- Stores effort ID, site ID, description, and date.
+
+### 6. `HeritageInventorySystem`
+- Combines functionality from the other classes to manage the entire heritage inventory.
+- Supports operations like adding sites, managing categories, and recording/viewing preservation efforts.
+
+## Getting Started
+
+### Prerequisites
+- A C++ compiler (e.g., GCC, Clang).
+- Basic knowledge of C++ programming.
+
+### How to Run
+1. Clone this repository to your local machine.
+2. Compile the source code using a C++ compiler:
+   g++ -o heritage_inventory final_project.cpp
+3. Run the compiled program:
+   ./heritage_inventory
 
 ## Contributing
+Contributions are welcome! If you have suggestions or improvements, please fork the repository and submit a pull request.
 
-Contributions are welcome! If you’d like to improve or extend this project, feel free to fork the repository and submit a pull request.
+### Contact
+For questions or feedback, please contact the project maintainer at emma.luu112@gmail.com.
 
-## Contact
-
-For questions or feedback, please contact me at emma.luu112@gmail.com
