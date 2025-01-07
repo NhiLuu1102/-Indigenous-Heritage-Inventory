@@ -33,7 +33,7 @@ This project allowed me to:
 1. **Clone the Repository**:
    
 bash
-   git clone https://github.com/yourusername/indigenous-heritage-inventory.git
+   git clone https://github.com/NhiLuu1102/indigenous-heritage-inventory.git
    cd indigenous-heritage-inventory
 
 2. **Compile the Code**:
